@@ -1,4 +1,4 @@
-# M5 - Pet Kare
+# Pet Kare
 
 ## Como rodar os testes localmente
 
@@ -43,45 +43,8 @@ source venv/Scripts/activate
 pip install pytest-testdox pytest-django
 ```
 
-### 4 Rodar os testes referentes a cada tarefa isoladamente:
-
-Exemplo:
-
-- Tarefa 1
+### 4 Rodar os testes:
 
 ```shell
-pytest --testdox -vvs tests/tarefas/tarefa_1/
-```
-
-- Tarefa 2
-
-```shell
-pytest --testdox -vvs tests/tarefas/tarefa_2/
-```
-
-- Tarefa 3
-
-```shell
-pytest --testdox -vvs tests/tarefas/tarefa_3/
-```
-
-Você também pode rodar cada método de teste isoladamente seguindo uma substring, adicionando a flag `-k` seguido da substring a ser encontrada
-(atenção, se o pytest achar multiplos métodos que contenham a mesma substring em seu nome, ele executará todos):
-
-```shell
-pytest --testdox -vvsk test_can_not_create_pet_when_missing_keys
-```
-
-<hr>
-
-Você também pode rodar cada método de teste isoladamente:
-
-```shell
-pytest --testdox -vvs caminho/para/o/arquivo/de/teste::NomeDaClasse::nome_do_metodo_de_teste
-```
-
-Exemplo: executar somente "test_can_get_product_by_id".
-
-```shell
-pytest --testdox -vvs tests/tarefas/tarefa_1/test_get_product_by_id.py::TestGetProductById::test_can_get_product_by_id
+pytest --testdox
 ```
